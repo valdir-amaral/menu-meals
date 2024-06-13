@@ -1,0 +1,33 @@
+<div class="page-wrapper">
+    <div class="left-part">
+        <div>
+            <h1>ZapFood</h1>
+            <h2>Entrar</h2>
+            <p>Não tem uma conta? Cadastre-se grátis</p>
+        </div>
+        <div >
+            <fieldset>
+                <label for="">E-mail</label>
+                <input [(ngModel)]="userEmail" type="email" placeholder="Digite o e-mail" required>
+            </fieldset>
+            <fieldset>
+                <label for="">Senha</label>
+                <input [(ngModel)]="password" type="text" placeholder="Digite a senha" required>
+            </fieldset>
+            <button (click)="doLogin()" class="btn-primary">Entrar</button>
+        </div>
+
+        
+        <p ngIf="loginMessage">{{loginMessage}}</p>
+        <p style="text-align: center;">/* Tente logar usando o login abaixo: */</p>
+        <pre>
+            email: admin&#64;admin.com,
+            senha: 123
+        </pre>
+    </div>
+    <div class="right-part">
+        <img src="/assets/images/chef.jpg" alt="">
+        <h2>Aumente suas vendas com nosso catálogo virtual</h2>
+        <p>Temos ferramentas personalizadas para montar seu catálogo, criar campanhas de desconto e muito mais pro seu restaurante!</p>
+    </div>
+</div>

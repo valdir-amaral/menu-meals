@@ -1,0 +1,25 @@
+<h1>Olá, {{loggedUser}}! Veja seu catálogo abaixo.</h1>
+<p>Alimentos tirados da <a href="https://www.themealdb.com/api.php" target="_blank">Free Meal API</a></p>
+
+<div class="buttons">
+    @for (letra of letters; track letra) {
+        <button (click)="fetchProducts(letra)">{{letra.toUpperCase()}}</button>
+    }      
+</div>
+<div class="grid-products">
+
+    @for (item of items; track item) {
+        <div class="card">
+            <img src="{{item.strMealThumb}}" alt="">
+
+            <div class="card-content">
+                <h3>{{item.strMeal}}</h3>
+                <a href="{{item.strYoutube}}" target="_blank" class="btn-primary">
+                    Ver no YouTube
+                </a>
+            </div>
+            
+        </div>
+    }
+    
+</div>
